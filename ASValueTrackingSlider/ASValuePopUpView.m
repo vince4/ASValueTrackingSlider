@@ -85,6 +85,7 @@ NSString *const SliderFillColorAnim = @"fillColor";
         _arrowLength = 13.0;
         _widthPaddingFactor = 1.15;
         _heightPaddingFactor = 1.1;
+        _positionYOffset = 0;
         
         _textLayer = [CATextLayer layer];
         _textLayer.alignmentMode = kCAAlignmentCenter;
@@ -190,7 +191,7 @@ NSString *const SliderFillColorAnim = @"fillColor";
     
     CGFloat anchorX = 0.5+(arrowOffset/CGRectGetWidth(frame));
     self.layer.anchorPoint = CGPointMake(anchorX, 1);
-    self.layer.position = CGPointMake(CGRectGetMinX(frame) + CGRectGetWidth(frame)*anchorX, 0);
+    self.layer.position = CGPointMake(CGRectGetMinX(frame) + CGRectGetWidth(frame)*anchorX, -_positionYOffset);
     self.layer.bounds = (CGRect){CGPointZero, frame.size};
     
     [self setText:text];

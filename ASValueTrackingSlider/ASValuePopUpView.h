@@ -25,6 +25,7 @@
 @property (nonatomic) CGFloat arrowLength;
 @property (nonatomic) CGFloat widthPaddingFactor;
 @property (nonatomic) CGFloat heightPaddingFactor;
+@property (nonatomic) CGFloat positionYOffset;
 
 - (UIColor *)color;
 - (void)setColor:(UIColor *)color;

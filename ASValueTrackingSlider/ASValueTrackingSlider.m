@@ -154,6 +154,16 @@
     return self.popUpView.heightPaddingFactor;
 }
 
+- (void)setPopUpViewYOffset:(CGFloat)popUpViewYOffset
+{
+    self.popUpView.positionYOffset = popUpViewYOffset;
+}
+
+- (CGFloat)popUpViewYOffset
+{
+    return self.popUpView.positionYOffset;
+}
+
 // when either the min/max value or number formatter changes, recalculate the popUpView width
 - (void)setMaximumValue:(float)maximumValue
 {
